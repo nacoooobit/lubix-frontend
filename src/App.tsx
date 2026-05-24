@@ -7,7 +7,8 @@ import VerificationCode from "./pages/verific-code";
 import NewPassword from "./pages/new-password";
 import Home from "./pages/Home"; 
 import HomeUsuario from "./pages/home-usuario";
-
+import RegistroEmpresa from "./pages/RegistroEmpresa";
+import LoginEmpresa from "./pages/loginempresa";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       <Route path="/register/VerifyEmailPage" element={<VerificationCode />} />
       <Route path="/new-password" element={<NewPassword />} />
       <Route path="/home-usuario" element={<HomeUsuario />} />
-
+      <Route path="/registro-empresa" element={<RegistroEmpresa />} />
+      <Route path="/login-empresa" element={<LoginEmpresa />} />
     </Routes>
   );
 }

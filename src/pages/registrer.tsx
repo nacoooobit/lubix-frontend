@@ -206,6 +206,15 @@ export const Register = () => {
                         >
                             {isPasswordValid ? " Crear Cuenta" : "Contraseña no válida"}
                         </button>
+
+                        {/* Botón Registrarse como empresa */}
+                        <button
+                            type="button"
+                            onClick={() => navigate("/registro-empresa")}
+                            className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 active:from-green-700 active:to-green-800 text-white font-bold py-3.5 sm:py-4 px-6 rounded-xl sm:rounded-2xl text-sm sm:text-base shadow-lg hover:shadow-xl active:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 transform disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:hover:shadow-lg"
+                        >
+                            Registrarse Como Empresa
+                        </button>
                     </form>
 
                     {/* Link login - MISMO ESTILO */}
