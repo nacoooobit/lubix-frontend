@@ -144,15 +144,7 @@ const Login: React.FC = () => {
               )}
             </button>
 
-            {/* Botón Iniciar Sesión Como Empresa */}
-            <button
-              type="button"
-              onClick={() => navigate("/login-empresa")}
-              className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-2.5 sm:py-3 px-4 rounded-lg sm:rounded-xl text-sm shadow-md hover:shadow-lg hover:-translate-y-px transition-all duration-200 transform disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-1.5"
-            >
-              Iniciar Sesión Como Empresa
-            </button>
-
+            
             {/* Link COMPACTO */}
             <div className="pt-4 border-t border-gray-100 text-center">
               <p className="text-gray-600 text-xs sm:text-sm">

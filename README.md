@@ -12,13 +12,13 @@ Lubix es una plataforma de gestión de usuarios y empresas. Este frontend propor
 
 ## 🛠️ Stack Tecnológico
 
-- **React 19.2.4** — Librería UI moderna
-- **TypeScript 5.9** — Seguridad de tipos en JavaScript
-- **Vite 8.0** — Build tool rápido y optimizado
-- **Tailwind CSS 3.4** — Framework de estilos utilitario
-- **React Router 6.30** — Enrutamiento de páginas
-- **Axios 1.7** — Cliente HTTP para consumir APIs
-- **PostCSS + Autoprefixer** — Procesamiento de estilos
+- **React 19.2.6** — Librería UI moderna
+- **TypeScript 6.0.3** — Seguridad de tipos en JavaScript
+- **Vite 8.0.14** — Build tool rápido y optimizado
+- **Tailwind CSS 3.4.19** — Framework de estilos utilitario
+- **React Router 7.15.1** — Enrutamiento de páginas
+- **Axios 1.16.1** — Cliente HTTP para consumir APIs
+- **PostCSS + Autoprefixer 10.5.0** — Procesamiento de estilos
 
 ## 📁 Estructura del Proyecto
 
@@ -77,6 +77,55 @@ Genera una carpeta `dist/` optimizada para deploy.
 ```bash
 npm run preview
 ```
+
+## ✅ Cambios recientes realizados
+
+### 1. Dependencias ajustadas y más seguras
+Se dejaron las versiones de los paquetes con números exactos en `package.json`, en lugar de usar rangos amplios.
+Esto ayuda a:
+- evitar cambios inesperados al instalar
+- reproducir el proyecto igual en cualquier equipo
+- reducir riesgo de incompatibilidades y vulnerabilidades
+
+### 2. Registro unificado: usuario y empresa en una sola pantalla
+La página de registro ahora funciona como un solo formulario con un selector superior para elegir entre:
+- Usuario
+- Empresa
+
+Cuando se selecciona "Empresa", aparecen campos extra como:
+- nombre de la empresa
+- NIT
+- dirección
+- sector
+
+El diseño visual no cambió, solo se hizo dinámico.
+
+### 3. Corrección de errores de lógica en el formulario
+Se solucionaron dos problemas importantes:
+- el modo empresa estaba enviando el nombre de la empresa como si fuera el nombre del contacto
+- la confirmación de contraseña no estaba validándose correctamente en todos los casos
+
+Esto se corrigió en `src/pages/registrer.tsx` para que el formulario funcione de forma consistente.
+
+## 🧭 Cómo lo hice paso a paso
+
+1. Revisé el archivo de dependencias (`package.json`) y piné versiones exactas.
+2. Verifiqué que el proyecto siguiera compilando con `pnpm build`.
+3. Revisé la página de registro en `src/pages/registrer.tsx`.
+4. Identifiqué el problema de lógica del formulario y lo corregí.
+5. Unifiqué la experiencia de usuario/empresa en una sola pantalla sin tocar el estilo principal.
+6. Volví a validar con `pnpm build` para asegurar que todo siguiera funcionando.
+
+## 🔎 Qué se verificó
+
+Se ejecutaron estas comprobaciones para confirmar que el proyecto quedó estable:
+
+```bash
+pnpm build
+pnpm lint
+```
+
+El build terminó correctamente, lo que confirma que la página compila sin errores.
 
 ## 📄 Páginas Principales
 
@@ -194,12 +243,12 @@ npm run preview      # Previsualiza el build
 
 | Paquete | Versión | Propósito |
 |---------|---------|----------|
-| react | ^19.2.4 | Librería UI |
-| react-router-dom | ^6.30.3 | Enrutamiento |
-| axios | ^1.7.7 | HTTP client |
-| tailwindcss | ^3.4.19 | Estilos |
-| typescript | ~5.9.3 | Type checking |
-| vite | ^8.0.1 | Build tool |
+| react | 19.2.6 | Librería UI |
+| react-router-dom | 7.15.1 | Enrutamiento |
+| axios | 1.16.1 | HTTP client |
+| tailwindcss | 3.4.19 | Estilos |
+| typescript | 6.0.3 | Type checking |
+| vite | 8.0.14 | Build tool |
 
 ## 🔧 Configuración Clave
 
